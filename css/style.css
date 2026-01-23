@@ -1,6 +1,8 @@
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-family: Helvetica, Sans-Serif;
+    background-color: #EEF0F2;
+    color: #141414;
 }
 
 .topnav{
@@ -14,7 +16,7 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 14pt;
 }   
 
 .topnav a:hover{
@@ -25,4 +27,17 @@ body {
 .topnav a.active{
     background-color: #ddd; 
     color: white;
+}
+
+.tile-header{
+    font-size: 1.5rem;
+}
+
+a{
+    color: #0D21A1;
+}
+
+a.tile{
+    text-decoration: none;
+    color: #141414;
 }
