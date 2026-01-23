@@ -69,3 +69,7 @@ a.link-tile{
 .title{
     text-align: center;
 }
+
+.tile-content h3{
+    margin-bottom: 0;
+}
