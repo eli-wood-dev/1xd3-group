@@ -16,7 +16,7 @@ a{
 }
 
 .topnav{
-    background-color: #979AAF; 
+    background-color: #A3A5B8; 
     overflow: hidden;
 } 
 
@@ -51,7 +51,7 @@ p{
 
 .tile-content{
     margin-top: 0;
-    background-color: #979AAF;
+    background-color: #A3A5B8;
     border-radius: 0 0 5px 5px;
     padding: 10px;
 }
