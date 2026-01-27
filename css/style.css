@@ -79,6 +79,10 @@ a.link-tile{
     margin-bottom: 0;
 }
 
+.tile-content img{
+    max-width: 100%;
+}
+
 .hero{
     display: flex; 
     align-items: center;
