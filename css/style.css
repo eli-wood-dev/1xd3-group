@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap');
+
 body {
-    margin: 0;
-    font-family: Helvetica, Sans-Serif;
-    background-color: #EEF0F2;
-    color: #141414;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
 }
 
 html {
@@ -17,7 +18,7 @@ a{
 
 .topnav{
     background-color: #A3A5B8; 
-    overflow: hidden;
+    overflow: hidden; 
 } 
 
 .topnav a{
@@ -25,7 +26,11 @@ a{
     float: left;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    text-decoration: none; 
+    font-family: 'Montserrat', 'Oswald', 'Segoe UI', sans-serif;
+    font-weight: 700; 
+    letter-spacing: 0.02em;
+    text-transform: uppercase; 
 }   
 
 .topnav a:hover{
@@ -76,4 +81,68 @@ a.link-tile{
 
 .tile-content img{
     max-width: 100%;
+}
+
+.hero{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    padding: 3rem 1rem; 
+    box-sizing: border-box;
+}
+
+.hero-title{
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight:900;
+    font-size:clamp(2rem,6vw,4rem);
+    margin:0;
+    letter-spacing:0.02em;
+} 
+
+.hero-slogan{
+    font-size:clamp(1rem,2.2vw,1.2rem); 
+    margin:0.5rem 0 1rem; 
+    font-weight: 400;
+} 
+
+.hero-cta{
+    font-size:clamp(1rem,1.5vw,1rem);
+    padding: 0.6 1rem; 
+    text-decoration: none; 
+    font-weight: 600;
+}
+
+.topnav .icon{
+    display: none;
+} 
+
+/* Media query for showing hamburger menu on small screens */
+@media screen and (max-width: 600px){
+    .topnav a:not(:first-child){
+        display: none; 
+    }
+    .topnav a.icon{
+        float:right; 
+        display: block; 
+    }
+} 
+
+/*Media query for responsive navbar when hamburger menu is clicked */
+@media screen and (max-width: 600px){
+    .topnav.responsive{
+        position: relative;
+    } 
+
+    .topnav.responsive a.icon{
+        position: absolute; 
+        right: 0; 
+        top: 0; 
+    } 
+
+    .topnav.responsive a{
+        display:block; 
+        text-align: center; 
+        float: none
+    }
 }
