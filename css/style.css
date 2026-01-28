@@ -83,6 +83,16 @@ a.link-tile{
     max-width: 100%;
 }
 
+.side-image{
+    display: flex;
+    gap: 10px;
+}
+
+.side-image img{
+    max-width: 50%;
+    height: fit-content;
+}
+
 .hero{
     display: flex; 
     align-items: center;
