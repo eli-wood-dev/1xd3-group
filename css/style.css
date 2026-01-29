@@ -79,8 +79,16 @@ a.link-tile{
     margin-bottom: 0;
 }
 
+.tile-content h4{
+    margin-bottom: 0;
+}
+
 .tile-content img{
     max-width: 100%;
+}
+
+img.content-image{
+    margin-top: 5px;
 }
 
 .side-image{
@@ -271,6 +279,10 @@ a.link-tile{
     cursor:pointer;
 } 
 .site-footer-mobile{ display:none }
+
+.no-margin{
+    margin: 0;
+}
 
 /*Media query for responsive navbar when hamburger menu is clicked */
 @media screen and (max-width: 600px){
