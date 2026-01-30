@@ -284,6 +284,11 @@ img.content-image{
     margin: 0;
 }
 
+.side-image .aaryn_pic{
+    height: 400px;
+
+}
+
 /*Media query for responsive navbar when hamburger menu is clicked */
 @media screen and (max-width: 600px){
     .topnav.responsive{
@@ -349,3 +354,4 @@ img.content-image{
     /* remove extra padding on desktop columns when hidden */
     .site-footer .footer-col{ padding:0 }
 }
+
