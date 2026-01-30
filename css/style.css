@@ -67,8 +67,6 @@ p{
 .tile{
     margin: 15px 10% 15px 10%;
 	padding: 0px; 
-    height: auto;
-    width: 80%;
 }
 
 a.link-tile{
@@ -103,9 +101,19 @@ img.content-image{
 }
 
 .side-image img{
-    width:160px; 
-    height:160px; 
+    max-width: 40%; 
     object-fit: cover; 
+}
+
+@media (max-width: 1024px) {
+    .side-image {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .side-image img {
+        max-width: 100%;
+    }
 }
 
 .hero{
@@ -260,12 +268,14 @@ img.content-image{
     list-style:none; 
     padding:0; 
     margin:0;
-    text-decoration: underline;
 }
 .footer-links a{
     color: inherit; 
     text-decoration:none; 
     opacity:0.95;
+}
+.footer-links a:hover{
+    text-decoration:underline; 
 }
 .footer-links h4, .footer-subscribe h4{
     margin:0 0 0.5rem 0;
@@ -315,6 +325,10 @@ img.content-image{
         display:block; 
         text-align: center; 
         float: none
+    }
+
+    .tile{
+        margin: 15px 5% 15px 5%;
     }
 }
 
