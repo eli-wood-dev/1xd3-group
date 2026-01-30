@@ -84,8 +84,16 @@ a.link-tile{
     margin-bottom: 0;
 }
 
+.tile-content h4{
+    margin-bottom: 0;
+}
+
 .tile-content img{
     max-width: 100%;
+}
+
+img.content-image{
+    margin-top: 5px;
 }
 
 .side-image{
@@ -282,6 +290,15 @@ a.link-tile{
 } 
 .site-footer-mobile{ display:none }
 
+.no-margin{
+    margin: 0;
+}
+
+.side-image .aaryn_pic{
+    height: 400px;
+
+}
+
 /*Media query for responsive navbar when hamburger menu is clicked */
 @media screen and (max-width: 600px){
     .topnav.responsive{
@@ -346,3 +363,4 @@ a.link-tile{
     /* remove extra padding on desktop columns when hidden */
     .site-footer .footer-col{ padding:0 }
 }
+
