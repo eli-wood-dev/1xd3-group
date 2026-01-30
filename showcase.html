@@ -7,11 +7,12 @@ web page and include your name as author.
 
 <head>
     <meta charset="utf-8">
-    <title>Sega Group Page</title>
+    <title>Work Showcase</title>
     <link rel="icon" href="images/Sega Logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width">
+    <script src="js/menu.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +36,48 @@ web page and include your name as author.
             </p>
         </div>
     </div>
-    <script src="js/menu.js"></script>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col footer-left">
+                <img src="images/Sega Logo.png" alt="Logo" class="footer-logo">
+                <p>+1 (123) 456-7890</p>
+                <p>example@mcmaster.com</p>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-subscribe">
+                <h4>Contact Us</h4>
+                <form class="footer-form" action="#" method="post">
+                    <input type="email" name="email" placeholder="Reach out to us here!">
+                    <button type="submit" aria-label="Subscribe">→</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile footer (shown at small breakpoints) -->
+    <footer class="site-footer-mobile" aria-hidden="true">
+        <div class="mobile-inner">
+            <nav class="mobile-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+            </nav>
+
+            <div class="mobile-contact">
+                <span class="mobile-contacts-inline">+1 (123) 456-7890 • example@mcmaster.com</span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -7,11 +7,12 @@ web page and include your name as author.
 
 <head>
     <meta charset="utf-8">
-    <title>Sega Group Page</title>
+    <title>Group Project</title>
     <link rel="icon" href="images/Sega Logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width">
+    <script src="js/menu.js" defer></script>
 </head>
 
 <body>
@@ -24,8 +25,100 @@ web page and include your name as author.
             <i class="fa fa-bars"></i>
         </a>
     </div>
-    <p>TODO: test.</p>
-    <script src="js/menu.js"></script>
-</body>
+    <div class="tile">
+        <div class="tile-header">Initial Client Report</div>
+        <div class="tile-content">
+            <h3 class="no-margin">4S Solutions Excavating Website</h3>
+            <p>
+                This website will be the main site to find information about the 4S Excavating Service.
+                The primary purpose is to serve as advertising for the service and will contain information on contracting services or renting the excavators.
+            </p>
 
+            <h3>About the Client</h3>
+            <p>
+                The client for this project is Donny Sousa, and his company 4S Solutions.
+            </p>
+
+            <h3>Project Requirements</h3>
+            <h4 class="no-margin">Target Users</h4>
+            <p>
+                The main users for this site would be contractors and homeowners.
+                While a desktop view would be important, a lot of these people will be accessing the site from a phone.
+                Because of this we will prioritize making a professional and responsive mobile design.
+            </p>
+
+            <h4>Static Information</h4>
+            <p>
+                The website will contain information on how to contact 4S in order to book services or rent excavators.
+                There will be images of the excavators and completed jobs, to show what can be done with the services.
+                The content will also emphasize that the services are only for small excavating work, as 4S does not currently have access to large excavators.
+                The design will be made to be easily expandable when new machines are bought and new services are provided.
+            </p>
+
+            <h4>Design Elements</h4>
+            <p>
+                The design is relatively free, but the site should look professional and incorporate the company logo.
+                Some examples of professional looking sites provided by the client can be found below.
+            </p>
+            <img src="images/example-1.png" class="content-image"></img>
+            <img src="images/example-2.png" class="content-image"></img>
+
+            <h4>Data</h4>
+            <p>
+                The site doesn't need a lot of data to be stored by the backend, but there are some features that could be nice to have.
+                One feature that might use external data is a calendar to show when different machines are available to be rented, and when they are in use.
+                There could also be different rental rates for each machine stored in a database.
+            </p>
+
+            <h4>Interactive Elements</h4>
+            <p>
+                One interactive element that would be nice would be an interactive calendar as mentioned above in the data section.
+                Another useful element would be embedding facebook posts to view them in the site.
+            </p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col footer-left">
+                <img src="images/Sega Logo.png" alt="Logo" class="footer-logo">
+                <p>+1 (123) 456-7890</p>
+                <p>example@mcmaster.com</p>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="showcase.html">Showcase</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-subscribe">
+                <h4>Contact Us</h4>
+                <form class="footer-form" action="#" method="post">
+                    <input type="email" name="email" placeholder="Reach out to us here!">
+                    <button type="submit" aria-label="Subscribe">→</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile footer (shown at small breakpoints) -->
+    <footer class="site-footer-mobile" aria-hidden="true">
+        <div class="mobile-inner">
+            <nav class="mobile-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="showcase.html">Showcase</a>
+            </nav>
+
+            <div class="mobile-contact">
+                <span class="mobile-contacts-inline">+1 (123) 456-7890 • example@mcmaster.com</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
