@@ -10,18 +10,124 @@ web page and include your name as author.
     <title>Sega Group Page</title>
     <link rel="icon" href="images/Sega Logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width">
+    <script src="js/menu.js" defer></script>
 </head>
 
 <body>
-    <div class="topnav">
+    <div class="topnav" id="websiteTopnav">
         <a class="active" href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="project.html">Projects</a>
-        <a href="showcase.html">Showcase</a>
+        <a href="showcase.html">Showcase</a> 
+        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
-    <p>TODO: Content goes here.</p> 
-    <p>Slogan: Developing faster than the speed of light.</p>
+    <header class="hero">
+        <div>
+            <h1 class="hero-title">We build attractive, user-centric projects.</h1> 
+            <p class="hero-slogan">Developing faster than the speed of light.</p>
+            <a class="hero-cta" href="project.html">View Projects</a>
+        </div>
+    </header>
+
+    <!-- Our Services Section -->
+    <section id="our-services" class="section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="cards-grid">
+            <article class="card service-card">
+                <h3 class="card-header">Frontend Development</h3>
+                <div class="card-body">
+                    <img src="images/placeholder.jpg" alt="Frontend Development illustration">
+                    <div class="card-content">
+                        <h4 class="card-title">Find the right fit.</h4>
+                        <p class="card-desc">From designing easy-to-navigate interfaces to implementing responsive layouts, we create engaging user experiences that keeps users coming back.</p>
+                        <a class="btn" href="#">Learn more</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card service-card">
+                <h3 class="card-header">Backend Development</h3>
+                <div class="card-body">
+                    <img src="images/placeholder.jpg" alt="Backend Development illustration">
+                    <div class="card-content">
+                        <h4 class="card-title">Connecting the dots.</h4>
+                        <p class="card-desc">We connect your systems by building server-side applications and integrate APIs that power seamless user experiences and business logic.</p>
+                        <a class="btn" href="#">Learn more</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- How We Do It Section -->
+    <section id="how-we-do-it" class="section">
+        <h2 class="section-title">How We Do It</h2>
+        <div class="cards-grid small-cards">
+            <article class="card small">
+                <div class="card-icon"><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">Discover</span></div>
+                <h4 class="card-title">Discover</h4>
+                <p class="card-desc">We listen, research, and define requirements together.</p>
+            </article>
+
+            <article class="card small">
+                <div class="card-icon"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sr-only">Design</span></div>
+                <h4 class="card-title">Design</h4>
+                <p class="card-desc">We craft a tailored solution that fits your business and process.</p>
+            </article>
+
+            <article class="card small">
+                <div class="card-icon"><i class="fa fa-rocket" aria-hidden="true"></i><span class="sr-only">Deliver</span></div>
+                <h4 class="card-title">Deliver</h4>
+                <p class="card-desc">We implement, present, and re-iterate upon our product until we get it right.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col footer-left">
+                <img src="images/Sega Logo.png" alt="Logo" class="footer-logo">
+                <p>+1 (123) 456-7890</p>
+                <p>example@mcmaster.com</p>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="showcase.html">Showcase</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-subscribe">
+                <h4>Contact Us</h4>
+                <form class="footer-form" action="#" method="post">
+                    <input type="email" name="email" placeholder="Reach out to us here!">
+                    <button type="submit" aria-label="Subscribe">→</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile footer (shown at small breakpoints) -->
+    <footer class="site-footer-mobile" aria-hidden="true">
+        <div class="mobile-inner">
+            <nav class="mobile-links">
+                <a href="project.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="showcase.html">Showcase</a>
+            </nav>
+
+            <div class="mobile-contact">
+                <span class="mobile-contacts-inline">+1 (123) 456-7890 • example@mcmaster.com</span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

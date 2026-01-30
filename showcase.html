@@ -7,18 +7,23 @@ web page and include your name as author.
 
 <head>
     <meta charset="utf-8">
-    <title>Sega Group Page</title>
+    <title>Work Showcase</title>
     <link rel="icon" href="images/Sega Logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width">
+    <script src="js/menu.js" defer></script>
 </head>
 
 <body>
-    <div class="topnav">
+    <div class="topnav" id="websiteTopnav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="project.html">Projects</a>
         <a class="active" href="showcase.html">Showcase</a>
+        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
     
     <div class="tile">

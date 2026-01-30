@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap');
+
 body {
-    margin: 0;
-    font-family: Helvetica, Sans-Serif;
-    background-color: #EEF0F2;
-    color: #141414;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
 }
 
 html {
@@ -17,7 +18,7 @@ a{
 
 .topnav{
     background-color: #A3A5B8; 
-    overflow: hidden;
+    overflow: hidden; 
 } 
 
 .topnav a{
@@ -25,7 +26,11 @@ a{
     float: left;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    text-decoration: none; 
+    font-family: 'Montserrat', 'Oswald', 'Segoe UI', sans-serif;
+    font-weight: 700; 
+    letter-spacing: 0.02em;
+    text-transform: uppercase; 
 }   
 
 .topnav a:hover{
@@ -72,4 +77,275 @@ a.link-tile{
 
 .tile-content h3{
     margin-bottom: 0;
+}
+
+.tile-content h4{
+    margin-bottom: 0;
+}
+
+.tile-content img{
+    max-width: 100%;
+}
+
+img.content-image{
+    margin-top: 5px;
+}
+
+.side-image{
+    display: flex;
+    gap: 10px;
+}
+
+.side-image img{
+    max-width: 50%;
+    height: fit-content;
+}
+
+.hero{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    padding: 3rem 1rem; 
+    box-sizing: border-box;
+}
+
+.hero-title{
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight:900;
+    font-size:clamp(2rem,6vw,4rem);
+    margin:0;
+    letter-spacing:0.02em;
+} 
+
+.hero-slogan{
+    font-size:clamp(1rem,2.2vw,1.2rem); 
+    margin:0.5rem 0 1rem; 
+    font-weight: 400;
+} 
+
+.hero-cta{
+    font-size:clamp(1rem,1.5vw,1rem);
+    padding: 0.6 1rem; 
+    text-decoration: none; 
+    font-weight: 600;
+}
+
+.topnav .icon{
+    display: none;
+} 
+.section{
+    padding: 4rem 1rem; 
+}
+.section-title{
+    text-align: center;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
+}
+.cards-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.card{
+    background: #fff;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 6px 20px rgba(2,2,2,0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card-header{
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 18px 20px;
+    margin: 0;
+}
+.card-body{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 20px;
+}
+.card-body img{
+    width: 40%;
+    max-width: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.card-content{
+    flex: 1;
+}
+.card-title{
+    margin: 0 0 0.5rem 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+.card-desc{
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+.btn{
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    border-radius: 20px;
+    border: 2px solid #011638;
+    color: #011638;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.small-cards .card{
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+.card.small .card-icon{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #f5f0e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #011638;
+    font-size: 1.25rem;
+}
+.card.small .card-title{
+    margin-top: 0.50rem
+}
+
+.site-footer{
+    background-color: #A3A5B8; /* same as .topnav */
+    color: #141414;
+    padding: 2rem 1rem;
+}
+.footer-inner{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-col{
+    flex: 1 1 220px;
+    min-width: 180px;
+}
+.footer-logo{ 
+    display:block; 
+    width:84px; 
+    height:auto; 
+    margin-bottom:0.5rem;
+}
+.footer-links ul{ 
+    list-style:none; 
+    padding:0; 
+    margin:0;
+}
+.footer-links a{
+    color: inherit; 
+    text-decoration:none; 
+    opacity:0.95;
+}
+.footer-links h4, .footer-subscribe h4{
+    margin:0 0 0.5rem 0;
+}
+.footer-form{
+    display:flex; 
+    gap:0.5rem; 
+    align-items:center;
+}
+.footer-form input{
+    padding:0.5rem 0.75rem; 
+    border-radius:4px; 
+    border:1px solid rgba(0,0,0,0.08); 
+}
+.footer-form button{ 
+    padding:0.5rem 0.75rem; 
+    border-radius:4px; 
+    border:none; 
+    background:#011638; 
+    color:#fff; 
+    cursor:pointer;
+} 
+.site-footer-mobile{ display:none }
+
+.no-margin{
+    margin: 0;
+}
+
+/*Media query for responsive navbar when hamburger menu is clicked */
+@media screen and (max-width: 600px){
+    .topnav.responsive{
+        position: relative;
+    } 
+
+    .topnav.responsive a.icon{
+        position: absolute; 
+        right: 0; 
+        top: 0; 
+    } 
+
+    .topnav.responsive a{
+        display:block; 
+        text-align: center; 
+        float: none
+    }
+}
+
+/* Media query for responsive section design */
+@media (max-width: 880px){
+    .card-body{flex-direction: column;}
+    .card-body img{width: 80%; max-width: 300px;}
+}
+
+@media (max-width: 420px){
+    html{font-size:13px}
+    .section{padding:2rem 0.5rem}
+} 
+
+/* Media query for showing hamburger menu on small screens */
+@media screen and (max-width: 600px){
+    .topnav a{
+        display: none; 
+    }
+    .topnav a.icon{
+        float:right; 
+        display: block; 
+    }
+} 
+
+/* Mobile-specific footer: hide desktop footer and show compact mobile footer */
+@media (max-width:880px){
+    /* Hide desktop footer on small screens */
+    .site-footer{ display:none }
+
+    /* Show mobile footer */
+    .site-footer-mobile{display:block; background:#A3A5B8; color:#141414; padding:0.6rem 0.5rem; width:100%}
+    .site-footer-mobile .mobile-inner{ max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:0.5rem; align-items:center }
+
+    /* Links stacked and simple */
+    .site-footer-mobile .mobile-links{ display:flex; flex-direction: column; gap:0.75rem; flex-wrap:wrap; justify-content:center; text-align:center }
+    .site-footer-mobile .mobile-links a{ color:inherit; text-decoration:none; padding:0.25rem 0.5rem; font-size:0.95rem }
+
+    /* Hide headings and desktop-only elements */
+    .site-footer .footer-links h4, .site-footer .footer-subscribe h4{ display:none }
+    .site-footer .footer-logo, .site-footer .footer-subscribe { display:none }
+
+    /* Ensure contact inline at bottom */
+    .site-footer-mobile .mobile-contact{ width:100%; text-align:center; font-size:0.95rem }
+    .mobile-contacts-inline{ display:inline-block }
+
+    /* remove extra padding on desktop columns when hidden */
+    .site-footer .footer-col{ padding:0 }
 }
