@@ -45,8 +45,67 @@ web page and include your name as author.
 
             <h3>Data Description</h3>
             <p>
-                
+                The database will have 3 tables, Messages, Machines, and MachineRentals.
             </p>
+            <h4>Messages</h4>
+            <p>
+                The messages table is necessary to store all of the messages that the users send which will be viewed on the admin page.
+                The table will store the contents of the message and contact information for the user sending the message.
+            </p>
+            <table>
+                <tr>
+                    <th>PK int</th>
+                    <th>text</th>
+                    <th>varchar</th>
+                    <th>varchar</th>
+                    <th>varchar</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>content</td>
+                    <td>email</td>
+                    <td>name</td>
+                    <td>phone_number</td>
+                </tr>
+            </table>
+
+            <h4>Machines</h4>
+            <p>
+                The machines table will store all of the machines owned by 4S Solutions.
+                The table will store the name of the machine and a link to an image.
+            </p>
+            <table>
+                <tr>
+                    <th>PK int</th>
+                    <th>varchar</th>
+                    <th>varchar</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>name</td>
+                    <td>image</td>
+                </tr>
+            </table>
+
+            <h4>MachineRentals</h4>
+            <p>
+                The machine rentals table will store when specific machines are in use and when they become available.
+                The table will store the start date, the end date, and a foreign key which references which machine is in use.
+            </p>
+            <table>
+                <tr>
+                    <th>PK int</th>
+                    <th>FK int</th>
+                    <th>date</th>
+                    <th>date</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>machine_id</td>
+                    <td>start_date</td>
+                    <td>end_date</td>
+                </tr>
+            </table>
 
             <h3>Functions Performed by the App</h3>
             <p>
@@ -56,22 +115,23 @@ web page and include your name as author.
             <h3>Team Member Roles</h3>
             <h4 class="no-margin"><a href="https://cs1xd3.cas.mcmaster.ca/~woode17/index.html">Eli Wood</a></h4>
             <p>
-                
+                Eli will be working on the scheduling page which will display what machines are available and what times they are in use.
+                He will handle the client side functionality to display the data and he will also design the php scripts necessary to get the data.
             </p>
 
             <h4><a href="https://cs1xd3.cas.mcmaster.ca/~hegdes4/index.html">Shreyas Hegde</a></h4>
             <p>
-                
+                TODO
             </p>
 
             <h4><a href="https://cs1xd3.cas.mcmaster.ca/~sogig/index.html">Gurbaz Sogi</a></h4>
             <p>
-                
+                TODO
             </p>
 
             <h4><a href="https://cs1xd3.cas.mcmaster.ca/~gilla156/index.html">Aaryn Gill</a></h4>
             <p>
-                
+                TODO
             </p>
 
             <h3>Wireframes</h3>
@@ -97,7 +157,10 @@ web page and include your name as author.
 
             <h3>Increments</h3>
             <p>
-                
+                The project will have 2 main increments, the first delivery on April 7, and the final deliverable on April 19.
+                The first increment will have a landing page, the ability to enter admin mode, the ability to send messages, a simple admin view for messages, and a listing of all machines stating when they are in use.
+                By the final deliverable we will finalize styling, polish the messaging system, and make the machine listing fully show date ranges when each machine is available or in use.
+                Some of the content in the final deliverable may be done in time for the first increment, but we will prioritize what is laid out in the first increment to be done first.
             </p>
 
             <h3>Client feedback</h3>
