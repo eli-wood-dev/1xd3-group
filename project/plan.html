@@ -50,8 +50,8 @@ web page and include your name as author.
             <h4>Messages</h4>
             <p>
                 The messages table is necessary to store all of the messages that the users send which will be viewed on the admin page.
-                The table will store the contents of the message and contact information for the user sending the message.
-                The table will also store if a message has been resolved.
+                The table will store the contents of the message and contact information for the user sending the message as well as timestamps. 
+                The table will also store if a message has been resolved or not, so that the admin can easily filter messages to only show unresolved messages.
             </p>
             <table>
                 <tr>
@@ -61,6 +61,9 @@ web page and include your name as author.
                     <th>varchar</th>
                     <th>varchar</th>
                     <th>boolean</th>
+                    <th>timestamp</th> 
+                    <th>timestamp</th>
+                    <th>varchar</th>
                 </tr>
                 <tr>
                     <td>id</td>
@@ -68,7 +71,10 @@ web page and include your name as author.
                     <td>email</td>
                     <td>name</td>
                     <td>phone_number</td>
-                    <td>resolved</td>
+                    <td>resolved</td> 
+                    <td>created_at</td>
+                    <td>resolved_at</td>
+                    <td>category</td>
                 </tr>
             </table>
 
@@ -115,7 +121,7 @@ web page and include your name as author.
             <h3>Functions Performed by the App</h3>
             <h4 class="no-margin">Send Messages</h4>
             <p>
-                Users sending messages will use an INSERT query on the messages table to add the message and contact info.
+                Users sending messages will use an INSERT query on the messages table to add the message and all other info. 
             </p>
 
             <h4>Read Messages</h4>
@@ -160,7 +166,7 @@ web page and include your name as author.
             <p>
                 Shreyas will be working on the landing page and the messaging page.
                 The landing page will be the first page you see, and Shreyas will design an inviting and professesional page to give a good first impression.
-                The other page will cointain a form where the users can send a message asking to rent machines which includes their contact information.
+                The other page will contain a form where the users can send a message asking to rent machines which includes their contact information.
             </p>
 
             <h4><a href="https://cs1xd3.cas.mcmaster.ca/~sogig/index.html">Gurbaz Sogi</a></h4>
@@ -180,13 +186,13 @@ web page and include your name as author.
 
             <h3>Wireframes</h3>
             <h4 class="no-margin">Landing Page</h4>
-            <img src="images/placeholder.png">
+            <img src="images/landing_page_wireframe.png">
 
             <h4>Schedule Page</h4>
             <img src="images/scheduling-wireframe.png">
 
             <h4>Message Page</h4>
-            <img src="images/placeholder.png">
+            <img src="images/message_page_wireframe.png">
 
             <h4>Admin Page</h4>
             <img src="images/placeholder.png">
