@@ -378,3 +378,15 @@ img.content-image{
     .site-footer .footer-col{ padding:0 }
 }
 
+table, th, td{
+    border: 1px solid;
+    text-align: center;
+}
+
+th, td{
+    padding: 5px;
+}
+
+table{
+    border-collapse: collapse;
+}
