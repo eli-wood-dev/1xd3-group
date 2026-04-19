@@ -1,0 +1,241 @@
+<!doctype html>
+<!--
+TODO: This is a comment. Change this header comment to describe the 
+web page and include your name as author.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Development Plan</title>
+    <link rel="icon" href="../images/Sega Logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width">
+    <script src="../js/menu.js" defer></script>
+</head>
+
+<body>
+    <div class="topnav" id="websiteTopnav">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../project.html">Projects</a>
+        <a href="../showcase.html">Showcase</a>
+        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="tile">
+        <div class="tile-header">Development Plan</div>
+        <div class="tile-content">
+            <p>Updated content is marked in <i>italics.</i></p>
+            <h3>Names</h3>
+            <p>
+                The members of team SEGA are <a href="https://cs1xd3.cas.mcmaster.ca/~woode17/index.html">Eli Wood</a>, <a href="https://cs1xd3.cas.mcmaster.ca/~hegdes4/index.html">Shreyas Hegde</a>, <a href="https://cs1xd3.cas.mcmaster.ca/~sogig/index.html">Gurbaz Sogi</a>, and <a href="https://cs1xd3.cas.mcmaster.ca/~gilla156/index.html">Aaryn Gill</a>.
+                Our client is 4S Solutions, which is owned by Donny Sousa, who we are communicating with.
+                The name of the project is the 4S Solutions Excavating Website.
+            </p>
+
+            <h3>Purpose</h3>
+            <p>
+                The purpose of the website is to serve as a landing page for anyone interested in hiring the 4S excavating service or renting their machines.
+                The site will have a main landing page, a page containing which machines are in use or reserved at specified times, a page to send a message asking to rent a machine or service, and an admin page to read messages.
+                We decided to add the functionality of the admin page and sending messages directly through the site to streamline the user experience and to make the users more likely to actually reach out.
+            </p>
+
+            <h3>Data Description</h3>
+            <p>
+                The database will have <i>4</i> tables, <i>Users</i>, Messages, Machines, and MachineRentals.
+            </p>
+            <h4>Messages</h4>
+            <p>
+                The messages table is necessary to store all of the messages that the users send which will be viewed on the admin page.
+                The table will store the contents of the message and contact information for the user sending the message as well as timestamps. 
+                The table will also store if a message has been resolved or not, so that the admin can easily filter messages to only show unresolved messages.
+            </p>
+            <table>
+                <tr>
+                    <th>PK int</th>
+                    <th>text</th>
+                    <th>varchar</th>
+                    <th>varchar</th>
+                    <th>varchar</th>
+                    <th>boolean</th>
+                    <th>timestamp</th> 
+                    <th>timestamp</th>
+                    <th>varchar</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>content</td>
+                    <td>email</td>
+                    <td>name</td>
+                    <td>phone_number</td>
+                    <td>resolved</td> 
+                    <td>created_at</td>
+                    <td>resolved_at</td>
+                    <td>category</td>
+                </tr>
+            </table>
+
+            <h4>Machines</h4>
+            <p>
+                The machines table will store all of the machines owned by 4S Solutions.
+                The table will store the name of the machine, a description, and a link to an image.
+            </p>
+            <table>
+                <tr>
+                    <th>PK int</th>
+                    <th>varchar</th>
+                    <th>text</th>
+                    <th>varchar</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>name</td>
+                    <td>description</td>
+                    <td>image</td>
+                </tr>
+            </table>
+
+            <h4>MachineRentals</h4>
+            <p>
+                The machine rentals table will store when specific machines are in use and when they become available.
+                The table will store the start date, the end date, and a foreign key which references which machine is in use.
+            </p>
+            <table>
+                <tr>
+                    <th>PK int</th>
+                    <th>FK int</th>
+                    <th>date</th>
+                    <th>date</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>machine_id</td>
+                    <td>start_date</td>
+                    <td>end_date</td>
+                </tr>
+            </table>
+
+            <h4>Users</h4>
+            <p><i>
+                The users table will store valid administrator users to allow for logging in to the admin mode.
+                The table will store the email, name, and password of the admin users.
+                The passwords are stored in a hashed format.
+            </i></p>
+            <table>
+                <tr>
+                    <th>PK int</th>
+                    <th>varchar</th>
+                    <th>varchar</th>
+                    <th>varchar</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>email</td>
+                    <td>name</td>
+                    <td>password</td>
+                </tr>
+            </table>
+
+            <h3>Functions Performed by the App</h3>
+            <h4 class="no-margin">Send Messages</h4>
+            <p>
+                Users sending messages will use an INSERT query on the messages table to add the message and all other info. 
+            </p>
+
+            <h4>Read Messages</h4>
+            <p>
+                Reading messages from the admin page will use a SELECT query to get all unresolved messages.
+                There <i>is</i> an option to filter the messages to show only unresolved, resolved, or both.
+            </p>
+
+            <h4><i>Toggle Message Resolved</i></h4>
+            <p>
+                Resolving <i>and unresolving</i> messages from the admin page will use an UPDATE query to <i>toggle the resolved status of a specific message</i>.
+            </p>
+
+            <h4>View Machines</h4>
+            <p>
+                Viewing machines will use a SELECT query to view all machines. This will also SELECT from MachineRentals to display if the specified machine is available or in use.
+            </p>
+
+            <h3>Team Member Roles</h3>
+            <h4 class="no-margin"><a href="https://cs1xd3.cas.mcmaster.ca/~woode17/index.html">Eli Wood</a></h4>
+            <p>
+                Eli will be working on the scheduling page which will display what machines are available and what times they are in use.
+                He will handle the client side functionality to display the data and he will also design the php scripts necessary to get the data.
+                <i>He will also work on implementing hashing for the login system and create the backend for sending messages.</i>
+            </p>
+
+            <h4><a href="https://cs1xd3.cas.mcmaster.ca/~hegdes4/index.html">Shreyas Hegde</a></h4>
+            <p>
+                Shreyas will be working on the landing page and the messaging page.
+                The landing page will be the first page you see, and Shreyas will design an inviting and professesional page to give a good first impression.
+                The other page will contain a form where the users can send a message asking to rent machines which includes their contact information.
+                <i>He will also ensure all pages have a clean look and work well on mobile.</i>
+            </p>
+
+            <h4><a href="https://cs1xd3.cas.mcmaster.ca/~sogig/index.html">Gurbaz Sogi</a></h4>
+            <p>
+                Gurbaz will work on the admin page, including viewing messages.
+                He will make a professesional view for messages, including the option to sort messages to only show unresolved tasks.
+                He will also add a checkbox to mark a message as resolved, such as when a job is completed.
+                <i>He will also make the login page which redirects to the admin page.</i>
+            </p>
+
+            <h4><a href="https://cs1xd3.cas.mcmaster.ca/~gilla156/index.html">Aaryn Gill</a></h4>
+            <p>
+                Aaryn will work on tasks with the admin page.
+                He will work on the admin login so that a site admin can enter admin mode.
+                He will make the admin pages check if the user is logged in, and only show the pages when the user is logged in as an admin.
+                He will also work with Gurbaz to create the content on the admin page.
+            </p>
+
+            <h3>Wireframes</h3>
+            <p><i>This section still uses the original wireframes, but the site has a more polished and cohesive feel than what these show.</i></p>
+            <h4>Landing Page</h4>
+            <img src="images/landing_page_wireframe.png">
+
+            <h4>Schedule Page</h4>
+            <img src="images/scheduling-wireframe.png">
+
+            <h4>Message Page</h4>
+            <img src="images/message_page_wireframe.png">
+
+            <h4>Admin Page</h4>
+            <img src="images/admin-wireframe.jpg" width="350">
+
+            <h3>Increments</h3>
+            <p>
+                The project will have 2 main increments, the first delivery on April 7, and the final deliverable on April 19.
+                The first increment will have a landing page, the ability to enter admin mode, the ability to send messages, a simple admin view for messages, and a listing of all machines stating when they are in use.
+                By the final deliverable we will finalize styling, polish the messaging system by implementing resolved vs unresolved messages, and make the machine listing fully show date ranges when each machine is available or in use.
+                <i>Much of the content for the final deliverable was finished in time for the first delivery, so the final delivery will focus more on polish and creating a consistent site feel.</i>
+            </p>
+
+            <h3>Client Feedback</h3>
+            <h4 class="no-margin">Development Plan Feedback</h4>
+            <p>
+                When we presented the development plan to the client they liked it, but they had some minor feedback.
+                They said that the content on some of the wireframes seemed like it might need to change, but we discussed that the wireframes are temporary and will not necessarily be what the final page looks like.
+                The second piece of feedback was that they were surpised by the messaging system, and they did not think it would be fully necessary, but they said it was a good idea and that "We would like to see what you guys do with it as we can see how it would make it easier for clients to get a hold of us."
+                Overall they were happy with the development plan and did not suggest any major changes.
+            </p>
+            <h4>First Increment Feedback</h4>
+            <p>
+                Our client had some feedback on the first increment we made. This is what they had to say about our project:
+                Overall we are very pleased with the progress of the site so far. The design is very easy to navigate, and the 
+                information is presented in an orderly fashion. We will obviously need to tweak the placeholder text, and its possible
+                we may need to meet again to modify some formatting here and there, but that will have to be well in the future
+                as we don't yet have the content written up that we'd like to include on the site. One thing to note is that
+                it'd be nice if the scheduling/booking dates for the machines were shown in a calendar, or at least in a more
+                organized table.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
